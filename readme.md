@@ -4,7 +4,7 @@
 
 Run following commands;
 
-```
+```sh
 git clone https://github.com/kaosf/shellscript-try-catch-finally
 cd shellscript-try-catch-finally
 ./run.sh
@@ -20,9 +20,9 @@ ERROR!
 final process
 ```
 
-Confirm return code by running the following command;
+Confirm the return code by running the following command;
 
-```
+```sh
 echo $? #=> 1
 ```
 
