@@ -2,6 +2,16 @@
 
 Version 0.1.0
 
+## Download the skelton code
+
+```sh
+wget https://raw.github.com/kaosf/shellscript-try-catch-finally/0.1.0/skelton.sh
+# or
+curl https://raw.github.com/kaosf/shellscript-try-catch-finally/0.1.0/skelton.sh -o skelton.sh
+
+chmod +x skelton.sh
+```
+
 ## Usage
 
 Run following commands;
