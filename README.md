@@ -1,5 +1,7 @@
 # ShellScript try-catch-finally
 
+Version 0.1.0
+
 ## Usage
 
 Run following commands;
