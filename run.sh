@@ -1,23 +1,31 @@
 #! /bin/sh
 
-finally() {
+(
+  set -e
+
+  # try block
+  ./a.sh
+  ./b.sh
+  ./c.sh
+  # end
+
+)
+[ $? -eq 0 ] || (
   RET=$?
-  echo "return code: $RET"
-  if [ $RET -ne 0 ]; then
-                              #
-    echo "ERROR!"             # here is 'catch' block
-                              #
-  else
-    echo "no error (OK!)"
-  fi
-                              #
-  echo "final process"        # here is 'finally' block
-                              #
+
+  # catch block
+  echo "return code: ${RET}"
+  echo "ERROR!"
+  # end
+
+  exit $RET
+)
+{
+  RET=$?
+
+  # finally block
+  echo "final process"
+  # end
+
   exit $RET
 }
-set -e
-trap finally EXIT
-                              #
-./a.sh                        # here is 'try' block
-./b.sh                        # exit 1, exit 2, ... mean 'throw'
-./c.sh                        #
